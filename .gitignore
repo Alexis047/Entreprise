@@ -19,5 +19,5 @@
 # /phpunit.xml
 ###< symfony/phpunit-bridge ###
 
-
+# Ceci est à faire à chaque nouveau projet
 /.vscode/*
