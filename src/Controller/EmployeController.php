@@ -67,4 +67,23 @@ class EmployeController extends AbstractController
             'form_employe' => $form->createView()
         ]);
     } // end function create 
+
+    #[Route('/modifier-un-employe/{id}', name: 'update_employe', methods:['GET', 'POST'])]
+    public function updateEmploye(Employe $employe, Request $request, EntityManagerInterface $entityManager): Response
+    {
+        $form = $this->createForm(EmployeFormType::class, $employe)
+            ->handleRequest($request);
+        
+        if($form->isSubmitted() && $form->isValid()) {
+            $entityManager->persist($employe);
+            $entityManager->flush();
+
+            return $this->redirectToRoute('default_home');
+        }
+
+        return $this->render('form/employe.html.twig', [
+            'form_employe' => $form->createView(),
+            'employe' => $employe
+        ]);
+    }
 } // end class

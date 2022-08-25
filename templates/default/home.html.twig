@@ -34,8 +34,8 @@
 						<td>{{ employe.salaire }}</td>
 						<td>{{ employe.createdAt | date('d/m/Y') }}</td>
 						<td>
-                            <a href=""><i class="fa-solid fa-edit"></i></a>
-                            <a href="" class="text-danger"><i class="fa-solid fa-trash"></i></a>
+                            <a href="{{ path('update_employe', {'id': employe.id}) }}">test</a>
+                            <a href="#" class="text-danger"><i class="fa-solid fa-trash"></i></a>
                         </td>
 					</tr>
                 {% endfor %}
