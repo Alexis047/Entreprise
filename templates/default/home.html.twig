@@ -34,8 +34,8 @@
 						<td>{{ employe.salaire }}</td>
 						<td>{{ employe.createdAt | date('d/m/Y') }}</td>
 						<td>
-                            <a href="{{ path('update_employe', {'id': employe.id}) }}">test</a>
-                            <a href="#" class="text-danger"><i class="fa-solid fa-trash"></i></a>
+                            <a href="{{ path('update_employe', {'id': employe.id}) }}">modif</a>
+                            <a href="{{ path('delete_employe', {'id': employe.id}) }}" onclick="return confirm('Voulez-vous supprimer définitivement cet employé ?')">suppr</a>
                         </td>
 					</tr>
                 {% endfor %}
