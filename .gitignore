@@ -21,3 +21,5 @@
 
 # Ceci est à faire à chaque nouveau projet
 /.vscode/*
+
+# /public/build/
