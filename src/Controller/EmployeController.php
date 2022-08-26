@@ -39,7 +39,7 @@ class EmployeController extends AbstractController
         $employe = new Employe();
 
         # Nous créons une variable $form qui contiendra le formulaire crée par la méthode CreateForm()
-        # Le mécanisme d'auto-hydratation se afit concrétement par l'ajout d'un second argument dans la méthode createForm(). On passera $employe en argument.
+        # Le mécanisme d'auto-hydratation se fait concrétement par l'ajout d'un second argument dans la méthode createForm(). On passera $employe en argument.
         $form = $this->createForm(EmployeFormType::class, $employe);
 
         # Pour que le mécanisme de base de Symfony soit respecté, on devra manipuler la requête avec la méthode handleRequest() et l'objet $request
